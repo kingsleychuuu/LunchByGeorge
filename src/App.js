@@ -22,6 +22,7 @@ import {
 function App() {
   return (
     <div className="App">
+      <Navigation></Navigation>
       <Router>
         <Switch>
           <Route path="/" exact component={Home} />
