@@ -15,14 +15,15 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
 } from "react-router-dom";
 
 
 function App() {
   return (
     <div className="App">
+     
       <Router>
+      <Navigation></Navigation>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/home" exact component={Home} />

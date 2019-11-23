@@ -1,0 +1,13 @@
+
+$primary-yellow: #ffdd3d;
+$accent-blue: rgb(65, 159, 221);
+$primary-font-colour: black;
+$hover-color: #101010;
+$nav-bar:#d1bdb7fa;
+
+
+@mixin navItems {
+    color:$primary-font-colour;
+    border: none;
+    text-decoration: none;
+}
