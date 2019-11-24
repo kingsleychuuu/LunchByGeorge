@@ -1,75 +1,121 @@
 @import "./stylesheet.scss";
 
-.Container{
-   
-    .headingContainer {
-        margin: 30px 0 30px 0;
-        padding-left: 27%;
-        width:60%;
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
 
+.Container{
+   width:100%;
+   text-align: center;
+    .headingContainer {
+        width:60%;
+        margin: 2% 0 2% 0;
+        padding-left:20%;
+        @include flexProps(row,space-around,center);
     .logo {
-        padding:3px;
+        width:20%;
+        margin-right:-10%;
+        padding:0 5px 0 5px;
         background-color: $primary-yellow;
     }
 	.headingInfo {
-        margin-left:30px;
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
-		line-height: 0.5vw;
+        justify-content: center;
+
 		h1 {
-            align-self: center;
-            font-family:"Nanum Gothic";
-			font-size: 4em;
+            @include textProps('Nanum Gothic', 4vw,0.5vw,center)
 		}
 		h2 {
-            margin-left:16%;
-            align-self: flex-end;
-            font-family:"Geneva";
-			font-size: 1.2vw;
+            @include textProps('Geneva',1.5vw,0.5vw,flex-end)
 		}
     }
 }
 	.navContainer {
-		display: block;
-        background-color: $accent-blue;
-        opacity:90%;
+        display: block;
         width: 100%;
-        
+        background-color: $accent-blue;
+        opacity:90%;        
 		nav {
-			display: flex;
-			justify-content: space-evenly;
-			flex-direction: row;
-			flex-wrap: wrap;
-			font-size: 3vh;
-			align-items: center;
-			font-family: "Courier New";
-			color: $primary-font-colour;
+            @include flexProps(row,space-evenly,center);
+            flex-wrap: wrap;
 			padding: 0 120px 0 120px;
-        }
-        
+			font-size: 1.5vw;
+			font-family: "Courier New";
+            color: $primary-font-colour;
+            overflow:scroll;
+        }    
 		.home, .about, .contact, .partners, .volunteer {
-			padding: 20px 0 20px 0;
+            padding: 20px 0 20px 0;
             list-style: none;
             @include navItems;
 			.home {
 				align-self: flex-start;
-            }
-            
+            }  
 			.contact {
 				align-self: flex-end;
             }
-         
         }
-
         .home:hover, .about:hover, .contact:hover, .partners:hover, .volunteer:hover{
             color:$primary-yellow;
         }
-
-	}
+    }
+    @media only screen and (max-width: 415px) { 
+        .headingContainer {
+            .logo {
+                width:35%;           
+            }
+            .headingInfo {  
+                word-break:break-word;
+            
+                h1 {
+                    @include textPropsChange(5vw,6vw,flex-start);
+                }
+                h2 {
+                    margin-left:20%;
+                    @include textPropsChange(2vw,3vw,flex-start);
+                }
+            }
+        }           
+        .navContainer {
+            nav {
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;     
+                height:10vh;
+                padding: 0 0 0 0px;
+                font-size: 2vh;
+            } 
+            .home, .about, .contact, .partners, .volunteer {
+                padding: 10px 5px 10px 5px;             
+            }
+        }
+    }
+    @media only screen and (min-width: 416px) and (max-width: 1305px){
+        .headingContainer{
+            justify-content: center;
+            width:100%;
+            .logo {
+                width:20%;
+            }
+            .headingInfo {
+                h1 {
+                    font-size: 5vw;
+                    line-height: 3vw;
+                }
+                h2 {
+                    margin-left:1%;
+                    font-size: 2vw;
+                }
+            }
+        }
+        .navContainer {
+            nav {
+                font-size: 2vh;
+                height:10vh;
+                padding: 0 0px 0 0px;
+            } 
+            .home, .about, .contact, .partners, .volunteer {
+                padding: 10px 5px 10px 5px;  
+            } 
+        }
+    }
 }
-
