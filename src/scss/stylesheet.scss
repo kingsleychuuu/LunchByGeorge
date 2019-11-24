@@ -3,9 +3,24 @@ $primary-yellow: #ffdd3d;
 $accent-blue: rgb(65, 159, 221);
 $primary-font-colour: black;
 $hover-color: #101010;
-$nav-bar:#d1bdb7fa;
 
-
+@mixin textProps($font,$size,$space,$align){
+    font-family:$font;
+    font-size:$size;
+    line-height:$space;
+    align-self:$align;
+}
+@mixin textPropsChange($size, $space,$align){
+    font-size:$size;
+    line-height:$space;
+    align-self: $align;
+}
+@mixin flexProps($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
 @mixin navItems {
     color:$primary-font-colour;
     border: none;
