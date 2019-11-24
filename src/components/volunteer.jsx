@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
-
-
-class About extends Component {
+class Volunteer extends Component {
     state = {}
     render() {
         return (<div>
@@ -13,4 +11,6 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Volunteer;
+
+
