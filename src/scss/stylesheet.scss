@@ -4,7 +4,7 @@ $accent-blue: rgb(65, 159, 221);
 $primary-font-colour: black;
 $hover-color: #101010;
 $nav-bar:#d1bdb7fa;
-
+$text-white: rgba(255, 255, 255, 0.7);
 
 @mixin navItems {
     color:$primary-font-colour;
