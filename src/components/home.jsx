@@ -77,6 +77,33 @@ class Home extends Component {
 
                 </div>
 
+                <Row>
+                    <Col md={5}>
+                        <div className="map-text">
+                            <h1> Come visit us</h1>
+                            <p> We are open Monday to Friday 9:00-11:30am </p>
+
+                            <p> Coffee and goodies always available</p>
+
+                            <p> 10 A.M we serve Soup!</p>
+
+                            <p> 11 A.M  Hot Nutritious Meal is served!</p>
+
+                        </div>
+
+                    </Col>
+                    <Col align="center" className="map-wrapper" md={7}>
+                        <div >
+                            <iframe className="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2858.9042593747786!2d-76.48542948448348!3d44.22962947910571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cd2aafeee04ff03%3A0x6a19edc061e8708e!2s129%20Wellington%20St%2C%20Kingston%2C%20ON%20K7L%203C9!5e0!3m2!1sen!2sca!4v1574611991729!5m2!1sen!2sca" width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+
+                    </Col>
+
+
+                </Row>
+
+
+
             </main>
         );
     }
