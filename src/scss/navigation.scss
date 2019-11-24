@@ -2,7 +2,7 @@
 
 
 .Container{
-   
+   width:100%;
     .headingContainer {
         margin: 5% 0 5% 0;
         padding-left: 27%;
@@ -82,7 +82,7 @@
     
         .logo {
             width:40%;
-            background-color: $primary-yellow;
+            
         }
         .headingInfo {
             display:flex;
@@ -140,6 +140,58 @@
   
 
 }
+@media only screen and (min-width: 416px) and (max-width: 1024px){
+    .headingContainer{
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        padding-left: 15%;
+    .logo {
+        width:20%;
+        padding: 0 2% 0 2%;
+    }
+
+    .headingInfo {
+        margin-left: 5%;
+        h1 {
+            font-size: 5vw;
+            line-height: 2vw;
+        }
+        h2 {
+            margin-left:10%;
+           
+            font-size: 2vw;
+        }
+    }
+}
+.navContainer {
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 2.5vh;
+        align-items: center;
+        font-family: "Courier New";
+        height:10vh;
+        color: $primary-font-colour;
+        padding: 0 0px 0 0px;
+    } 
+    .home, .about, .contact, .partners, .volunteer {
+        padding: 10px 5px 10px 5px;
+        list-style: none;
+        @include navItems;
+        .home {
+            align-self: flex-start;
+        }
+        
+        .contact {
+            align-self: flex-end;
+        }
+     
+    }
+  
+}
 }
 
-
+}
