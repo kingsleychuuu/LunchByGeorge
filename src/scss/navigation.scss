@@ -1,121 +1,101 @@
 @import "./stylesheet.scss";
+* {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.main-header {
+    padding: 10px;
+    width:100%;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+h1{
+font-size:10vw !important;
 
+}
+h2{
+    color:$accent-blue;
+font-size:6.5vw !important;
+margin: 5vw 0 !important;
+}
 
-.Container{
-   width:100%;
-   text-align: center;
-    .headingContainer {
-        width:60%;
-        margin: 2% 0 2% 0;
-        padding-left:20%;
-        @include flexProps(row,space-around,center);
-    .logo {
-        width:20%;
-        margin-right:-10%;
-        padding:0 5px 0 5px;
+nav{
+  width:100%;
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .navbar-toggle{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    .menu {
+        align-self: center;
+        font-size: 24px;
+		height: 2em;
+		width: 2em;
+		display: block;
+		cursor: pointer;
+		
+    }
+}
+    ul{
+        display: none;
+        list-style-type: none;
+        a{
+            text-decoration: none;
+        font-size:20px;
+        line-height: 2em;
+        color: black;
+        }
+     
+    }
+    .link-item-active{
+       
+        color:$accent-blue;
+    }
+	.active {
+		display: block;
+	}
+   
+}
+.header-logo{
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+ 
+    .logo{
+        height:150px;
         background-color: $primary-yellow;
     }
-	.headingInfo {
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+}
+.header-title{
+    width:50%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
 
-		h1 {
-            @include textProps('Nanum Gothic', 4vw,0.5vw,center)
-		}
-		h2 {
-            @include textProps('Geneva',1.5vw,0.5vw,flex-end)
-		}
+/* Mobile Styles */
+@media only screen and (max-width: 420px) {
+    .header-logo,.header-title{
+        min-width: 120px;
+ 
     }
 }
-	.navContainer {
-        display: block;
-        width: 100%;
-        background-color: $accent-blue;
-        opacity:90%;        
-		nav {
-            @include flexProps(row,space-evenly,center);
-            flex-wrap: wrap;
-			padding: 0 120px 0 120px;
-			font-size: 1.5vw;
-			font-family: "Courier New";
-            color: $primary-font-colour;
-            overflow:scroll;
-        }    
-		.home, .about, .contact, .partners, .volunteer {
-            padding: 20px 0 20px 0;
-            list-style: none;
-            @include navItems;
-			.home {
-				align-self: flex-start;
-            }  
-			.contact {
-				align-self: flex-end;
-            }
-        }
-        .home:hover, .about:hover, .contact:hover, .partners:hover, .volunteer:hover{
-            color:$primary-yellow;
-        }
-    }
-    @media only screen and (max-width: 415px) { 
-        .headingContainer {
-            .logo {
-                width:35%;           
-            }
-            .headingInfo {  
-                word-break:break-word;
-            
-                h1 {
-                    @include textPropsChange(5vw,6vw,flex-start);
-                }
-                h2 {
-                    margin-left:20%;
-                    @include textPropsChange(2vw,3vw,flex-start);
-                }
-            }
-        }           
-        .navContainer {
-            nav {
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;     
-                height:10vh;
-                padding: 0 0 0 0px;
-                font-size: 2vh;
-            } 
-            .home, .about, .contact, .partners, .volunteer {
-                padding: 10px 5px 10px 5px;             
-            }
-        }
-    }
-    @media only screen and (min-width: 416px) and (max-width: 1305px){
-        .headingContainer{
-            justify-content: center;
-            width:100%;
-            .logo {
-                width:20%;
-            }
-            .headingInfo {
-                h1 {
-                    font-size: 5vw;
-                    line-height: 3vw;
-                }
-                h2 {
-                    margin-left:1%;
-                    font-size: 2vw;
-                }
-            }
-        }
-        .navContainer {
-            nav {
-                font-size: 2vh;
-                height:10vh;
-                padding: 0 0px 0 0px;
-            } 
-            .home, .about, .contact, .partners, .volunteer {
-                padding: 10px 5px 10px 5px;  
-            } 
-        }
-    }
+/* Tablet Styles */
+@media only screen and (min-width: 421px) and (max-width: 960px) {
 }
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {}
