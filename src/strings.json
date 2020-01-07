@@ -9,5 +9,11 @@
         "contact":"Contact",
         "involved":"Get Involved",
         "partners":"Partners"
+    },
+    "footer":{
+        "telephone":"613-548-4617 ext.30",
+        "building":"St.George Hall",
+        "street":"129 Wellingston St.",
+        "address":"Kingston ON, K7L 4W5"
     }
 }

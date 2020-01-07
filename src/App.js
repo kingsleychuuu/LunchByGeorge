@@ -7,7 +7,7 @@ import Home from "./components/home";
 
 import About from "./components/about";
 import Partners from "./components/partners";
-
+import Footer from "./components/footer";
 import Volunteer from "./components/volunteer";
 import {
   //  Replace Hash with BrowserRouter if server fails
@@ -20,7 +20,6 @@ import {
 function App() {
   return (
     <div className="App">
-     
       <Router>
       <Navigation></Navigation>
         <Switch>
@@ -30,6 +29,7 @@ function App() {
           <Route path="/partners" exact component={Partners} />
           <Route path="/volunteer" exact component={Volunteer} />
         </Switch>
+        <Footer></Footer>
       </Router>
     </div>
   );
