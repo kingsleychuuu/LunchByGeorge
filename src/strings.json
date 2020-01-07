@@ -15,5 +15,13 @@
         "building":"St.George Hall",
         "street":"129 Wellingston St.",
         "address":"Kingston ON, K7L 4W5"
+    },
+    "logistics":{
+        "businessHoursHeader":"when we are open",
+        "businessHours":"Monday to Friday: 9:00-11:30 AM",
+        "mealSchedule":"Meal Schedule",
+        "mealOne":"All Day: Coffee + Goodies",
+        "mealTwo":"10 am: Soup",
+        "mealThree":"11 am: Hot nutritious meal"
     }
 }
