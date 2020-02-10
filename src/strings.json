@@ -1,7 +1,7 @@
 {
     "home":{
         "heading": "LUNCH BY GEORGE",
-        "subheading": "OUTREACH ST.GEORGE KINGSTON"
+        "subheading": "Outreach St.George Kingston"
     },
     "nav":{
         "home":"Home",
@@ -9,5 +9,19 @@
         "contact":"Contact",
         "involved":"Get Involved",
         "partners":"Partners"
+    },
+    "footer":{
+        "telephone":"613-548-4617 ext.30",
+        "building":"St.George Hall",
+        "street":"129 Wellingston St.",
+        "address":"Kingston ON, K7L 4W5"
+    },
+    "logistics":{
+        "businessHoursHeader":"when we are open",
+        "businessHours":"Monday to Friday: 9:00-11:30 AM",
+        "mealSchedule":"Meal Schedule",
+        "mealOne":"All Day: Coffee + Goodies",
+        "mealTwo":"10 am: Soup",
+        "mealThree":"11 am: Hot nutritious meal"
     }
 }

@@ -1,13 +1,64 @@
 
 $primary-yellow: #ffdd3d;
 $accent-blue: rgb(65, 159, 221);
-$primary-font-colour: black;
-$hover-color: #101010;
-$nav-bar:#d1bdb7fa;
-$text-white: rgba(255, 255, 255, 0.7);
+$accent-dark-blue:#134dba;
+$primary-font-colour: #101010;
 
+$light-gray:#ECECEC;
+$text-white: white;
+
+
+@mixin textProps($font,$size,$space,$align){
+    font-family:$font;
+    font-size:$size;
+    line-height:$space;
+    align-self:$align;
+}
+@mixin textPropsChange($size, $space,$align){
+    font-size:$size;
+    line-height:$space;
+    align-self: $align;
+}
+@mixin flexProps($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
 @mixin navItems {
     color:$primary-font-colour;
     border: none;
     text-decoration: none;
+}
+/* Animations */
+@mixin animation-slide-x($slide) {
+	position: relative;
+	animation-duration: 3s;
+	animation-direction: normal;
+	animation-name: slide-right;
+	@keyframes slide-right {
+		0% {
+			right: $slide;
+			top: 0px;
+		}
+		100% {
+			right: 0px;
+			top: 0px;
+		}
+	}
+}
+@mixin animation-slide-y {
+	position: relative;
+	animation-duration: 3s;
+	animation-direction: normal;
+	animation-name: slide-up;
+	@keyframes slide-up {
+		0% {
+			top: 500px;
+		}
+		100% {
+			left: 0px;
+			top: 0px;
+		}
+	}
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import Navigation from "./components/navigation";
@@ -8,7 +7,7 @@ import Home from "./components/home";
 
 import About from "./components/about";
 import Partners from "./components/partners";
-
+import Footer from "./components/footer";
 import Volunteer from "./components/volunteer";
 import {
   //  Replace Hash with BrowserRouter if server fails
@@ -21,7 +20,6 @@ import {
 function App() {
   return (
     <div className="App">
-     
       <Router>
       <Navigation></Navigation>
         <Switch>
@@ -31,22 +29,8 @@ function App() {
           <Route path="/partners" exact component={Partners} />
           <Route path="/volunteer" exact component={Volunteer} />
         </Switch>
+        <Footer></Footer>
       </Router>
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          This is the site for Lunch by George
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }

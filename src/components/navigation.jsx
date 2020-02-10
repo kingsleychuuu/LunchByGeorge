@@ -2,8 +2,20 @@ import * as Text from ".././strings.json";
 import React, { Component } from "react";
 import ".././scss/navigation.scss";
 import Logo from ".././media/dishLogoPlaceholder.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import Menu  from ".././media/menu-icon.svg";
+
 class Navigation extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { isToggleOn: false };
+		this.handleToggle = this.handleToggle.bind(this);
+	}
+	handleToggle() {
+		console.log(this.state);
+		const { isToggleOn } = this.state;
+		this.setState({ isToggleOn: !isToggleOn });
+	}
 	render() {
 		const heading = Text.home.heading;
 		const subHeading = Text.home.subheading;
@@ -14,36 +26,56 @@ class Navigation extends Component {
 		const getInvolved = Text.nav.involved;
 
 		return (
-			<div className="Container">
-				<div className="headingContainer">
+			<div className="main-header">
+				<div className="header-logo">
 					<img className="logo" alt="Logo" src={Logo}></img>
-					<div className="headingInfo">
-						<h1>{heading}</h1>
-						<h2>{subHeading}</h2>
-					</div>
-				</div>
-				<div className="navContainer">
-					<nav>
-						<Link className="home" to="/home">
+				</div>	
+				<div className="header-title"><h1>{heading}</h1></div>
+				
+				
+				<h2 className="subTitle">{subHeading}</h2>
+			<nav className="navBar">
+			
+					<span className="navbar-toggle" onClick={this.handleToggle}>
+					<i className="menu">
+						<img className="menu-icon" alt="menu" src={Menu}></img>
+					</i>
+				
+					</span>
+				
+					<ul className={`navbar-menu ${this.state.isToggleOn ? "active":""}`}>
+						<li>
+						<NavLink className="home" activeClassName="link-item-active home" to="/home">
 							{home}
-						</Link>
-						<Link className="about" to="/about">
+						</NavLink>
+						</li>
+						<li>
+						<NavLink className="about" activeClassName="link-item-active about" to="/about">
 							{about}
-						</Link>
-						<Link className="volunteer" to="/volunteer">
+						</NavLink>
+						</li>
+						<li>
+						<NavLink className="volunteer" activeClassName="link-item-active volunteer" to="/volunteer">
 							{getInvolved}
-						</Link>
-						<Link className="partners" to="/partners">
+						</NavLink>
+						</li>
+						<li>
+						<NavLink className="partners" activeClassName="link-item-active partners" to="/partners">
 							{partners}
-						</Link>
-						<Link className="contact" to="contact">
+						</NavLink>
+						</li>
+						<li>
+						<NavLink className="contact" activeClassName="link-item-active contact" to="contact">
 							{contact}
-						</Link>
-					</nav>
-				</div>
+						</NavLink>
+						</li>
+					</ul>
+				</nav>	
 			</div>
+			
 		);
 	}
 }
+
 
 export default Navigation;
